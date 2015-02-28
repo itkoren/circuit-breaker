@@ -391,6 +391,6 @@
     }
     // Included directly via <script> tag or inside a WebWorker
     else {
-        root.Machineto = CircuitBreaker;
+        root.CircuitBreaker = CircuitBreaker;
     }
 })();
