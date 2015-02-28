@@ -1,0 +1,58 @@
+{
+    "name": "circuit-breaker",
+    "description": "Javascript port of Hystrix like circuit breaker which can be used to provide stability and prevent cascading failures in distributed systems. Commands are passed through the circuit breaker for allowing execution. The circuit breaker will stop allowing executions if failures have gone past the defined threshold.",
+    "private": false,
+    "scripts": {
+        "test": "node ./node_modules/mocha/bin/mocha ./test/*.tests.js",
+        "testling": "./node_modules/.bin/testling"
+    },
+    "dependencies": {},
+    "version": "0.0.1",
+    "author": {
+        "name": "Itai Koren (@itkoren) <itkoren@gmail.com>",
+        "url": "https://github.com/itkoren"
+    },
+    "contributors": [],
+    "main": "./dist/circuitBreaker.js",
+    "homepage": "https://github.com/itkoren/circuit-breaker",
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/itkoren/circuit-breaker.git"
+    },
+    "bugs": {
+        "url": "https://github.com/itkoren/circuit-breaker/issues"
+    },
+    "keywords": [
+        "Hystrix",
+        "AKA",
+        "circuit",
+        "commands"
+    ],
+    "license": "MIT",
+    "engines": {
+        "node": ">= 0.10.x"
+    },
+    "config": {
+        "travis-cov": {
+            "threshold": 98
+        }
+    },
+    "testling": {
+        "browsers": [
+            "ie/6..latest",
+            "chrome/22..latest",
+            "chrome/canary",
+            "firefox/16..latest",
+            "firefox/nightly",
+            "safari/6.0..latest",
+            "opera/11.0..latest",
+            "opera/next",
+            "iphone/6",
+            "ipad/6",
+            "android-browser/latest"
+        ],
+        "harness": "mocha",
+        "files": "./test/circuitBreaker.tests.js"
+    },
+    "readme": "README.md"
+}
